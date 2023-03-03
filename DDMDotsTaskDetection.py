@@ -7,7 +7,7 @@ import hddm
 def fit_subject(data, quantiles):
 
     """
-    Simulates stim-coded data.
+    Fit detection dots data with age group as IV
     """
 
     subj_idx = np.unique(data['subj_idx'])
