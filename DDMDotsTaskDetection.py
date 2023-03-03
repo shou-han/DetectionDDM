@@ -27,9 +27,9 @@ def fit_subject(data, quantiles):
 
 # settings
 
-os.chdir('/fs03/ep52/MeadhbhProject/GoNoGoDemo/')
+os.chdir('PUT YOUR FILE DIRECTORY HERE')
 os.getcwd()
-dfs = hddm.load_csv('Data/MData3.csv')
+dfs = hddm.load_csv('PUT YOUR CSV FILE HERE')
 
 # combine in one dataframe:
 df_emp = dfs
@@ -49,4 +49,4 @@ params_fitted =[]
 #params_fitted = pd.concat(params_fitted)
 
 params_fitted = pd.concat(fit_subject(data[1], quantiles) for data in df_emp.groupby('subj_idx'))
-params_fitted.to_csv(r'DDM_OldYoung5.csv')
+params_fitted.to_csv(r'DDM_Output.csv')
